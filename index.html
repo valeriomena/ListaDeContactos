@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Lista de contactos 1</title>
+</head>
+<body class="grid-container">
+  
+    <div class="container">
+      <form class="form">
+        <div class="formulario">
+          <div class="campos">
+            <h2>Agenda</h2>
+            <div class="busqueda">
+            <i class="fa-solid fa-user IconoGrande"></i>
+            <input name="nombre" type="text" id="nombre" required class="box" placeholder="Escribe tu nombre"/>
+            </div>
+            <div class="busqueda">
+            <i class="fa-solid fa-envelope IconoGrande"></i>
+            <input name="email" type="email" id="correo" required class="box" placeholder="Escribe tu correo"/>
+            </div>
+            <div class="busqueda">
+            <i class="fa-solid fa-phone IconoGrande"></i>
+            <input name="telefono" type="phone" id="phone" required class="box" placeholder="Digita tu telefono"/>
+            </div>
+            <div class="busqueda">
+            <i class="fa-solid fa-house IconoGrande"></i>
+            <input name="direccion" id="direccion" class="box" required placeholder="Escribe su direccion"></input>
+            </div>
+          </div>
+          <div class="eventos">
+              <div class="agregar">
+                <!--   <i class="fa-solid fa-address-book IconoGrande" onclick="capturar();"></i>
+                 -->
+                 <button id ="boton" class="button" value="Guardar" type="reset" class="" onclick="capturar();">
+                <span class ="fa-solid fa-address-book IconoGrande"></span>
+                </button>
+                
+              <!--   <a href="#" onclick="capturar();" type="reset">
+                  <span class ="fa-solid fa-address-book IconoGrande"></span>
+                  agregar
+                </a> -->  
+              </div>
+              
+              
+          </div>
+       </div> 
+      </form>
+      <div class="info">
+        <div class="buscar">
+              <input id="buscar" class="box" placeholder="Nombre a eliminar" type="text">
+              <button id ="delete" class="button" value="Eliminar" type="reset" class="" onclick="eliminar();">
+              <span class ="fa-sharp fa-solid fa fa-undo fa-eraser IconoGrande"></span>
+              </button> 
+              <!-- <i class="fa-sharp fa-solid fa fa-undo fa-eraser IconoGrande" type="Reset" onclick="eliminar();"></i>-->
+             
+            </div>
+        <div class="infoContactos">
+          <table id="tabla">
+            <thead>
+            <tr>
+              <th>Nombre</th>
+              <th>Correo</th>
+              <th>Teléfono</th>
+              <th>Dirección</th>
+              <th>-</th>
+              
+            </tr>
+          </thead>
+          
+
+          </table>
+        </div>
+      </div>
+      
+    </div>
+    <script src="js/main.js"></script>
+  </body>
+</html>

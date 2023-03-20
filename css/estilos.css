@@ -1,0 +1,188 @@
+/*Borra margenes y espacios del html*/
+*{
+    margin: 0;
+    padding: 0;
+}
+html {
+    height: 100%;/*Empuja los elemenos al 100% del tamaño de la pag*/
+}
+.izquierda{
+    height: 20%;
+}
+.derecha{
+    height: 20%;
+}
+body {
+    display: grid;
+    place-content: center;
+    /* Poner color al fondo 
+    background-color: #404040;*/
+    min-height: 100%;/*Empuja los elemenos al 100% del tamaño de la pag*/
+    
+}
+/*seccion del menu de navegacion */
+nav {
+    text-align: center;
+    background-color: #0D0D0D;
+}
+/*los estilos que se aplican se aplican a la ultima etiqueta en su orden*/
+nav ul li {
+        display: inline-block; /*pone los links de forma horizontal*/
+        padding: 16px;/*separa las etiquetas*/
+    }
+nav ul li a {
+    text-decoration: none;
+    color: #f5f3f3;
+    font-size: large;
+    font-family: 'Playfair Display', serif;
+    text-shadow: 2px 2px 5px #F2F2F2;
+}
+/*sub clase que permite hacer el efecto de link*/
+nav ul li a:hover {
+    color: aquamarine;
+}
+/*maquetacion se le dan los tamaños a las secciones de la pag*/
+section {
+    background-color: #F2F2F2;
+    float: left;
+}
+aside {
+    /*background-color: #F2F2F2;*/
+    float: left;
+}
+#nombre {
+    text-align: center;
+    color: #0D0D0D;
+    font-family: 'Playfair Display', serif;
+    font-size: 64px;
+    text-shadow: 2px 2px 5px #737373;
+}
+#apellido {
+    text-align: center;
+    color: #0D0D0D;
+    font-family: 'Antic Didone', serif;
+    font-size: 60px;
+    text-shadow: 2px 2px 5px #737373;
+}
+h1{
+    text-align: center;
+    color: #0D0D0D;
+    font-family: 'Playfair Display', serif;
+    text-shadow: 2px 2px 5px #737373;
+}
+h2{
+    text-align: center;
+    color: #404040;
+    font-family: 'Poppins', sans-serif;
+    text-shadow: 2px 2px 5px #737373;
+}
+h3 {
+    text-align: center;
+    color: #404040;
+    font-family: 'Poppins', sans-serif;
+    text-shadow: 2px 2px 5px #737373;
+    text-align: justify;
+}
+h4 {
+    text-align: center;
+    color: #404040;
+    font-family: 'Poppins', sans-serif;
+    text-shadow: 2px 2px 5px #737373;
+    text-align: justify;
+}
+p{
+    text-align: center;
+    color: #404040;
+    font-family: 'Open Sans', sans-serif;
+    text-align: justify;
+}
+.read-more-btn {
+    background-color: #83848f;
+    border: none;
+    border-radius: 4px;
+    color: white;
+    /*padding: 15px 32px;
+       font-size: 1.2em;*/
+    box-shadow: 0px 0px 10px 0px #020c02;
+    cursor: pointer;
+}
+.modal-btn {
+    background-color: #19191b;
+    border: none;
+    border-radius: 4px;
+    color: white;
+    /*padding: 15px 32px;*/
+       font-size: 1.4em;
+    box-shadow: 0px 0px 10px 0px #aa97ce;
+    cursor: pointer;
+}
+.modal-btn:hover {
+            box-shadow: none;
+            background-color: rgb(52, 41, 92);
+            color: #fff;
+            transition: cubic-bezier(0.075, 0.82, 0.165, 1) 3.05s;
+        
+}
+.read-more-btn:hover {
+    box-shadow: none;
+    background-color: rgb(46, 32, 83);
+    color: #fff;
+    transition: cubic-bezier(0.075, 0.82, 0.165, 1) 3.05s;
+}
+.main {
+    display: grid;
+    margin-top: 50px;
+    /*para separarlo de la parte de arriba*/
+    border-radius: 25px;
+    padding: 5px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 4);
+     /*genera una sombra*/
+     margin: auto;
+     /*para separarlo de la parte de arriba*/
+     border-radius: 25px;
+     grid-template:
+        "experiencia" "estudios" auto
+        
+}
+.sidebar {
+    padding: 20px;
+}
+.sidebar h3 {
+    text-align: center;
+}
+.estudios {
+    padding: 8px;
+    margin: 25px;
+    grid-area: estudios;
+}
+.experiencia {
+    padding: 8px;
+    margin: 25px;
+    grid-area: experiencia;
+    
+}
+.footer {
+    padding: 8px;
+    margin: 25px;
+    border-radius: 25px;
+    padding: 5px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 4);
+    grid-area: footer;
+}
+.hideText {
+    padding: 10px;
+    display: none;
+}
+.showText {
+    display: block;
+}
+/*
+font-family: 'Antic Didone',
+serif;
+font-family: 'Open Sans',
+sans-serif;
+font-family: 'Playfair Display',
+serif;
+font-family: 'Poppins',
+sans-serif;
+*/

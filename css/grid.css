@@ -1,0 +1,101 @@
+/*Se parametriza el html para que los recursos se muestren en toda la pag*/
+html {
+    height: 100%;
+}
+/*Se parametriza el body para que los recursos se muestren en toda la pag*/
+body {
+    min-height: 100%;
+}
+/*se define la clase del contenedor de la grilla para definir su comportamiento*/
+.grid-container>* {
+    padding: 5px;
+    text-align: center;
+}
+/*se definen las clases y a cual grilla pertenece cada clase definida en el HTML (EN EL HTML SE DEBE DEFINIR UNA CLASE QUE CORRESPONDA A CADA ELEMENTO EN LA GRILLA)*/
+.header {
+    grid-area: header;
+}
+.navbar {
+    grid-area: navbar;
+}
+.sidebar {
+    grid-area: sidebar;
+}
+.experiencia {
+    grid-area: experiencia;
+}
+.estudios {
+    grid-area: estudios;
+}
+.main {
+    grid-area: main;
+    background-color: #F2F2F2;
+}
+.izquierda {
+    grid-area: izquierda;
+    height: 10%;
+    background-color: #F2F2F2;
+}
+.derecha {
+    grid-area: derecha;
+    height: 200px;
+    background-color: #F2F2F2;
+}
+.footer {
+    grid-area: footer;
+    background-color: #F2F2F2;
+}
+/*se definen el orden de como se muestra cada elemento en la grilla y sus tamaños predeterminados (VENTANA MAS PEQUEÑA UNA SOLA COLUMNA)*/
+.grid-container {
+    display: grid;
+    gap: 10px;
+    grid-template:
+        "header" 20px
+        "navbar" 120px
+        "sidebar" auto
+        "main" auto
+        "footer" auto;
+        
+}
+/*se definen el orden de como se muestra cada elemento en la grilla y sus tamaños predeterminados (VENTANA MAS MEDIANA UNA DOS COLUMNAS)*/
+@media (min-width: 700px) {
+    .grid-container {
+        grid-template:
+            "header header header  header" 20px
+            "navbar navbar navbar  navbar" 50px
+            "izquierda sidebar main derecha" auto
+            "footer footer  footer footer" auto /
+            100px 300px auto 100px;
+    }
+}
+/*se definen el orden de como se muestra cada elemento en la grilla y sus tamaños predeterminados (VENTANA MAS GRANDE UNA TRES COLUMNAS)*/
+@media (min-width: 1000px) {
+    .grid-container {
+            grid-template:
+                "header header header  header" 20px
+                "navbar navbar navbar  navbar" 50px
+                "izquierda sidebar main derecha" auto
+                "izquierda sidebar  footer derecha" auto /
+                100px 300px auto 100px;
+    }
+    .main{
+        display: grid;
+        grid-gap: 10px;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: 
+            "experiencia estudios";
+    }
+    
+}
+/*SE DEFINE LA FOTO TIPO RESPONSIVE*/
+.foto {
+    width: 75vw;
+    max-width: 220px;
+    min-width: 30px;
+    margin: auto;
+}
+.perfil {
+    width: 100%;
+    border-radius: 15px;
+    /*box-shadow: 0px 3px 5px rgba(15, 15, 15, 5);*/
+}
